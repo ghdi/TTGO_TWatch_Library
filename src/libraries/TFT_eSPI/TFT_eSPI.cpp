@@ -4982,3 +4982,20 @@ void TFT_eSPI::getSetup(setup_t &tft_settings)
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
+// lewis add. Mark : Used to set different models
+void TFT_eSPI::setDriver(uint32_t model, uint32_t freq)
+{
+    drv.tft_driver = model;
+    drv.tft_spi_freq = freq;
+}
+
+
+void TFT_eSPI::setPins(uint8_t mosi, uint8_t miso, uint8_t sclk, uint8_t cs, uint8_t dc)
+{
+    drv.pin_tft_mosi = mosi;
+    drv.pin_tft_miso = miso;
+    drv.pin_tft_clk = sclk;
+    drv.pin_tft_cs = cs;
+    drv.pin_tft_dc = dc;
+    tft_dc_pin = dc;
+}
