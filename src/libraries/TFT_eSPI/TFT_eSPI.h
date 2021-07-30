@@ -390,9 +390,6 @@ class TFT_eSPI : public Print { friend class TFT_eSprite; // Sprite class has ac
   // Sketch defined tab colour option is for ST7735 displays only
   void     init(uint8_t tc = TAB_COLOUR), begin(uint8_t tc = TAB_COLOUR);
 
-  // lewis add. Mark : Used to set different models
-  void    setDriver(uint32_t model, uint32_t freq );
-  void    setPins(uint8_t mosi, uint8_t miso, uint8_t sclk, uint8_t cs, uint8_t dc);
 
   // These are virtual so the TFT_eSprite class can override them with sprite specific functions
   virtual void     drawPixel(int32_t x, int32_t y, uint32_t color),

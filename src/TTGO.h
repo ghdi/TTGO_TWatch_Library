@@ -1226,9 +1226,10 @@ private:
         digitalWrite(TWATCH_TFT_RST, HIGH);
 
 #endif  /* (LILYGO_BLOCK_ST7796S_MODULE) && defined(LILYGO_WATCH_BLOCK) */
-        tft = new TFT_eSPI(w, h);
-        tft->setDriver(drv, freq);
-        tft->setPins(TWATCH_TFT_MOSI, TWATCH_TFT_MISO, TWATCH_TFT_SCLK, TWATCH_TFT_CS, TWATCH_TFT_DC);
+        tft = new TFT_eSPI();
+        //tft = new TFT_eSPI(w, h);
+        //tft->setDriver(drv, freq);
+        //tft->setPins(TWATCH_TFT_MOSI, TWATCH_TFT_MISO, TWATCH_TFT_SCLK, TWATCH_TFT_CS, TWATCH_TFT_DC);
 #endif  /*EXTERNAL_TFT_ESPI_LIBRARY*/
 
 
